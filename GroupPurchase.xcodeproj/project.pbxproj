@@ -13,6 +13,11 @@
 		87F39CFD1F25DD6B008DDAEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F39CFB1F25DD6B008DDAEC /* Main.storyboard */; };
 		87F39CFF1F25DD6B008DDAEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87F39CFE1F25DD6B008DDAEC /* Assets.xcassets */; };
 		87F39D021F25DD6B008DDAEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F39D001F25DD6B008DDAEC /* LaunchScreen.storyboard */; };
+		87F39D0A1F25E229008DDAEC /* tgs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87F39D091F25E229008DDAEC /* tgs.plist */; };
+		87F39D101F25E2AF008DDAEC /* GroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F39D0F1F25E2AF008DDAEC /* GroupModel.m */; };
+		87F39D141F25E45E008DDAEC /* GroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F39D121F25E45E008DDAEC /* GroupCell.m */; };
+		87F39D151F25E45E008DDAEC /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F39D131F25E45E008DDAEC /* GroupCell.xib */; };
+		87F39D181F2644A6008DDAEC /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F39D171F2644A6008DDAEC /* BannerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,14 @@
 		87F39CFE1F25DD6B008DDAEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87F39D011F25DD6B008DDAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87F39D031F25DD6B008DDAEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87F39D091F25E229008DDAEC /* tgs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tgs.plist; sourceTree = "<group>"; };
+		87F39D0E1F25E2AF008DDAEC /* GroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupModel.h; sourceTree = "<group>"; };
+		87F39D0F1F25E2AF008DDAEC /* GroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupModel.m; sourceTree = "<group>"; };
+		87F39D111F25E45E008DDAEC /* GroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupCell.h; sourceTree = "<group>"; };
+		87F39D121F25E45E008DDAEC /* GroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupCell.m; sourceTree = "<group>"; };
+		87F39D131F25E45E008DDAEC /* GroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
+		87F39D161F2644A6008DDAEC /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
+		87F39D171F2644A6008DDAEC /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +73,9 @@
 			children = (
 				87F39CF51F25DD6B008DDAEC /* AppDelegate.h */,
 				87F39CF61F25DD6B008DDAEC /* AppDelegate.m */,
-				87F39CF81F25DD6B008DDAEC /* ViewController.h */,
-				87F39CF91F25DD6B008DDAEC /* ViewController.m */,
-				87F39CFB1F25DD6B008DDAEC /* Main.storyboard */,
-				87F39CFE1F25DD6B008DDAEC /* Assets.xcassets */,
-				87F39D001F25DD6B008DDAEC /* LaunchScreen.storyboard */,
-				87F39D031F25DD6B008DDAEC /* Info.plist */,
+				87F39D0B1F25E242008DDAEC /* View */,
+				87F39D0C1F25E24B008DDAEC /* Model */,
+				87F39D0D1F25E262008DDAEC /* Controller */,
 				87F39CF21F25DD6B008DDAEC /* Supporting Files */,
 			);
 			path = GroupPurchase;
@@ -74,9 +84,44 @@
 		87F39CF21F25DD6B008DDAEC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				87F39CFB1F25DD6B008DDAEC /* Main.storyboard */,
+				87F39CFE1F25DD6B008DDAEC /* Assets.xcassets */,
+				87F39D001F25DD6B008DDAEC /* LaunchScreen.storyboard */,
+				87F39D031F25DD6B008DDAEC /* Info.plist */,
+				87F39D091F25E229008DDAEC /* tgs.plist */,
 				87F39CF31F25DD6B008DDAEC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87F39D0B1F25E242008DDAEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				87F39D111F25E45E008DDAEC /* GroupCell.h */,
+				87F39D121F25E45E008DDAEC /* GroupCell.m */,
+				87F39D131F25E45E008DDAEC /* GroupCell.xib */,
+				87F39D161F2644A6008DDAEC /* BannerView.h */,
+				87F39D171F2644A6008DDAEC /* BannerView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		87F39D0C1F25E24B008DDAEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87F39D0E1F25E2AF008DDAEC /* GroupModel.h */,
+				87F39D0F1F25E2AF008DDAEC /* GroupModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		87F39D0D1F25E262008DDAEC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				87F39CF81F25DD6B008DDAEC /* ViewController.h */,
+				87F39CF91F25DD6B008DDAEC /* ViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				87F39D021F25DD6B008DDAEC /* LaunchScreen.storyboard in Resources */,
+				87F39D0A1F25E229008DDAEC /* tgs.plist in Resources */,
 				87F39CFF1F25DD6B008DDAEC /* Assets.xcassets in Resources */,
+				87F39D151F25E45E008DDAEC /* GroupCell.xib in Resources */,
 				87F39CFD1F25DD6B008DDAEC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,7 +198,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F39D141F25E45E008DDAEC /* GroupCell.m in Sources */,
 				87F39CFA1F25DD6B008DDAEC /* ViewController.m in Sources */,
+				87F39D181F2644A6008DDAEC /* BannerView.m in Sources */,
+				87F39D101F25E2AF008DDAEC /* GroupModel.m in Sources */,
 				87F39CF71F25DD6B008DDAEC /* AppDelegate.m in Sources */,
 				87F39CF41F25DD6B008DDAEC /* main.m in Sources */,
 			);
