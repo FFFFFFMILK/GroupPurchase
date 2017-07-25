@@ -18,6 +18,8 @@
 		87F39D141F25E45E008DDAEC /* GroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F39D121F25E45E008DDAEC /* GroupCell.m */; };
 		87F39D151F25E45E008DDAEC /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F39D131F25E45E008DDAEC /* GroupCell.xib */; };
 		87F39D181F2644A6008DDAEC /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F39D171F2644A6008DDAEC /* BannerView.m */; };
+		87F39D1B1F26D9A1008DDAEC /* GroupFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F39D1A1F26D9A1008DDAEC /* GroupFooterView.m */; };
+		87F39D1F1F26DA02008DDAEC /* GroupFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F39D1E1F26DA02008DDAEC /* GroupFooterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,9 @@
 		87F39D131F25E45E008DDAEC /* GroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
 		87F39D161F2644A6008DDAEC /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
 		87F39D171F2644A6008DDAEC /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
+		87F39D191F26D9A1008DDAEC /* GroupFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupFooterView.h; sourceTree = "<group>"; };
+		87F39D1A1F26D9A1008DDAEC /* GroupFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupFooterView.m; sourceTree = "<group>"; };
+		87F39D1E1F26DA02008DDAEC /* GroupFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupFooterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +107,9 @@
 				87F39D131F25E45E008DDAEC /* GroupCell.xib */,
 				87F39D161F2644A6008DDAEC /* BannerView.h */,
 				87F39D171F2644A6008DDAEC /* BannerView.m */,
+				87F39D191F26D9A1008DDAEC /* GroupFooterView.h */,
+				87F39D1A1F26D9A1008DDAEC /* GroupFooterView.m */,
+				87F39D1E1F26DA02008DDAEC /* GroupFooterView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -188,6 +196,7 @@
 				87F39CFF1F25DD6B008DDAEC /* Assets.xcassets in Resources */,
 				87F39D151F25E45E008DDAEC /* GroupCell.xib in Resources */,
 				87F39CFD1F25DD6B008DDAEC /* Main.storyboard in Resources */,
+				87F39D1F1F26DA02008DDAEC /* GroupFooterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +210,7 @@
 				87F39D141F25E45E008DDAEC /* GroupCell.m in Sources */,
 				87F39CFA1F25DD6B008DDAEC /* ViewController.m in Sources */,
 				87F39D181F2644A6008DDAEC /* BannerView.m in Sources */,
+				87F39D1B1F26D9A1008DDAEC /* GroupFooterView.m in Sources */,
 				87F39D101F25E2AF008DDAEC /* GroupModel.m in Sources */,
 				87F39CF71F25DD6B008DDAEC /* AppDelegate.m in Sources */,
 				87F39CF41F25DD6B008DDAEC /* main.m in Sources */,
@@ -364,6 +374,7 @@
 				87F39D081F25DD6B008DDAEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

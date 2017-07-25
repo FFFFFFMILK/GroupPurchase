@@ -10,8 +10,9 @@
 #import "GroupCell.h"
 #import "GroupModel.h"
 #import "BannerView.h"
+#import "GroupFooterView.h"
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource,GroupFooterViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSMutableArray *dataArray;
@@ -50,6 +51,11 @@
     BannerView *bannerView = [[BannerView alloc]initWithFrame:CGRectMake(0, 0, 375, 200) WithImageArray:imgArr];
     self.tableView.tableHeaderView = bannerView;
     
+    // 设置尾部
+    GroupFooterView *footerView = [[[NSBundle mainBundle]loadNibNamed:@"GroupFooterView" owner:nil options:nil]firstObject];//[[GroupFooterView alloc]initWithFrame:CGRectMake(0, 0, 375, 44)];
+    footerView.delegate = self;
+    self.tableView.tableFooterView = footerView;
+    
 }
 
 #pragma mark - tableview datasource method
@@ -74,6 +80,35 @@
     cell.model = self.dataArray[indexPath.row];
     
     return cell;
+}
+
+#pragma mark - footerview delegate
+-(void)groupFooterView:(GroupFooterView *)footerView didClickBtn:(UIButton *)btn{
+    // 显示正在加载
+    footerView.showLoadingView = YES;
+    // 新增一个tableview cell
+    // -- 延迟 2 秒执行
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 隐藏正在加载
+        footerView.showLoadingView = NO;
+        
+        // 新增数据
+        GroupModel *model = [[GroupModel alloc]init];
+        model.icon = @"37e4761e6ecf56a2d78685df7157f097.png";
+        model.title = @"新增餐馆";
+        model.price = @"998";
+        model.buyCount = @"3";
+        
+        // 添加到数据数组中
+        [self.dataArray addObject:model];
+        
+        // 在 tableview 的最后一行添加 cell，重新载入这一行
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.dataArray.count-1 inSection:0];
+        [_tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        
+        // 滚动到最后一行
+        [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    });
 }
 
 @end
