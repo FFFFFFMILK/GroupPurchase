@@ -52,7 +52,7 @@
     self.tableView.tableHeaderView = bannerView;
     
     // 设置尾部
-    GroupFooterView *footerView = [[[NSBundle mainBundle]loadNibNamed:@"GroupFooterView" owner:nil options:nil]firstObject];//[[GroupFooterView alloc]initWithFrame:CGRectMake(0, 0, 375, 44)];
+    GroupFooterView *footerView = [[[NSBundle mainBundle]loadNibNamed:@"GroupFooterView" owner:nil options:nil]firstObject];
     footerView.delegate = self;
     self.tableView.tableFooterView = footerView;
     
